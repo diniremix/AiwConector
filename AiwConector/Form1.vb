@@ -27,13 +27,32 @@
         savestart = cab1 & cab2 & cab3 & vbNewLine & vbNewLine & cab4 & vbNewLine & cab5 & vbNewLine & cab6 & vbNewLine & _
         red1 & red2 & red3 & urls & red4 & vbNewLine & cab7 & vbNewLine & cab71 & vbNewLine & cab8 & vbNewLine & cab81 & _
         vbNewLine & cab10
-        'connect & TextBox1.Text
         System.IO.File.WriteAllText(Application.StartupPath & "\conector.html", savestart)
         With (proceso)
             .StartInfo.FileName = Application.StartupPath & "\conector.html"
             .Start()
         End With
-        ' Me.Text = red1 & red2 & red3 & savestart & red4
+        If CheckBox1.Checked = True Then
+
+        End If
+    End Sub
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Form2.Show()
+
     End Sub
 
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        ListBox1.Items.Remove(ListBox1.SelectedItem)
+    End Sub
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
+   
+
+    Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
+        TextBox1.Text = ""
+        TextBox1.Text = ListBox1.SelectedItem
+    End Sub
 End Class
