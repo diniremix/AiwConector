@@ -25,8 +25,9 @@ Partial Class Form1
         Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.Button1 = New System.Windows.Forms.Button
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
         Me.CheckBox1 = New System.Windows.Forms.CheckBox
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.TextBox2 = New System.Windows.Forms.TextBox
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,15 +59,6 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Escriba la IP + Puerto y presione Conectar"
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 76)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(413, 267)
-        Me.GroupBox2.TabIndex = 4
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Gestion de Servidores Favoritos"
-        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
@@ -77,18 +69,37 @@ Partial Class Form1
         Me.CheckBox1.Text = "Favorito"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 76)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(413, 267)
+        Me.GroupBox2.TabIndex = 4
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Gestion de Servidores Favoritos"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(458, 22)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(385, 321)
+        Me.TextBox2.TabIndex = 5
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(437, 355)
+        Me.ClientSize = New System.Drawing.Size(906, 355)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
-        Me.Text = "Aiw Gestor de servidores Favoritos"
+        Me.Text = "Aiw Gestor de Servidores Favoritos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
@@ -96,5 +107,6 @@ Partial Class Form1
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
 
 End Class
