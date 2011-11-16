@@ -24,7 +24,7 @@
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         If TextBox1.Text = "" Then
-            MsgBox("Debe introducir almenos una direccion IP", MsgBoxStyle.Exclamation, "Atencion")
+            MsgBox("Debe introducir al menos una direccion IP", MsgBoxStyle.Exclamation, "Atencion")
         Else
             urls = connect & TextBox1.Text
             savestart = cab1 & cab2 & cab3 & vbNewLine & vbNewLine & cab4 & vbNewLine & cab5 & vbNewLine & cab6 & vbNewLine & _
@@ -52,5 +52,40 @@
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
         TextBox1.Text = ""
         TextBox1.Text = ListBox1.SelectedItem
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        ListBox1.Items.Clear()
+    End Sub
+
+    Sub cargar()
+        On Error Resume Next
+        If My.Computer.FileSystem.FileExists(Application.StartupPath + "/lista.xml") Then
+            ListBox1.Items.Clear()
+            Dim sr As New System.IO.StreamReader(Application.StartupPath + "/lista.xml", System.Text.Encoding.Default, True)
+            While sr.Peek() <> -1
+                Dim s As String = sr.ReadLine()
+                If String.IsNullOrEmpty(s) Then
+                    Continue While
+                End If
+                ListBox1.Items.Add(s)
+            End While
+            sr.Close()
+        Else
+            MsgBox("Puede ser la primera vez que se ejecute" + vbNewLine + "la aplicacion por tanto no existe el archivo.", MsgBoxStyle.Information, "Error")
+            ListBox1.Items.Clear()
+        End If
+    End Sub
+
+    Sub guardar()
+      
+    End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        cargar()
+    End Sub
+
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        guardar()
     End Sub
 End Class

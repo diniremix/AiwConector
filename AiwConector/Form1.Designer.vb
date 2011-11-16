@@ -27,9 +27,12 @@ Partial Class Form1
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.CheckBox1 = New System.Windows.Forms.CheckBox
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.Button6 = New System.Windows.Forms.Button
+        Me.Button5 = New System.Windows.Forms.Button
+        Me.Button4 = New System.Windows.Forms.Button
+        Me.ListBox1 = New System.Windows.Forms.ListBox
         Me.Button3 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
-        Me.ListBox1 = New System.Windows.Forms.ListBox
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -74,33 +77,45 @@ Partial Class Form1
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Button6)
+        Me.GroupBox2.Controls.Add(Me.Button5)
+        Me.GroupBox2.Controls.Add(Me.Button4)
         Me.GroupBox2.Controls.Add(Me.ListBox1)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 76)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(413, 267)
+        Me.GroupBox2.Size = New System.Drawing.Size(432, 267)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Gestion de Servidores Favoritos"
         '
-        'Button3
+        'Button6
         '
-        Me.Button3.Location = New System.Drawing.Point(312, 51)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(92, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Eliminar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button6.Location = New System.Drawing.Point(313, 51)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(109, 23)
+        Me.Button6.TabIndex = 7
+        Me.Button6.Text = "Guardar Lista"
+        Me.Button6.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Button5
         '
-        Me.Button2.Location = New System.Drawing.Point(312, 22)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(92, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Agregar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button5.Location = New System.Drawing.Point(313, 22)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(109, 23)
+        Me.Button5.TabIndex = 6
+        Me.Button5.Text = "Cargar Lista"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(314, 138)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(108, 23)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "Limpiar Todo"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'ListBox1
         '
@@ -110,11 +125,29 @@ Partial Class Form1
         Me.ListBox1.Size = New System.Drawing.Size(294, 238)
         Me.ListBox1.TabIndex = 4
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(314, 109)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(108, 23)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Eliminar Servidor"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(314, 80)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(108, 23)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Agregar Servidor"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(438, 354)
+        Me.ClientSize = New System.Drawing.Size(456, 354)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
@@ -134,5 +167,8 @@ Partial Class Form1
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
 
 End Class
